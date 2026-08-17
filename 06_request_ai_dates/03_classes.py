@@ -19,11 +19,24 @@ class Coche:
         """Muestra si el coche arranca o no"""
         print(f"El coche {self.marca} {self.modelo} de color {self.color} arranco")
 
+    def info(self):
+        print(self.marca,self.modelo,self.color)
+
 mi_coche = Coche("Nissan","Primera","Gris")
 
 mi_coche.arrancar()
-
+mi_coche.info()
 print(mi_coche.marca)
+
+class Moto (Coche):
+    tipo = "Esto es un vehiculo de 2 ruedas"
+
+    def arrancar(self):
+        print(f"La moto de marca {self.marca} y modelo {self.modelo}, ha sido arrancada")
+
+mi_moto = Moto("Yamaha","R7","negra")
+mi_moto.arrancar()
+mi_moto.info()
 
 # Encapsulacion: es ocultar los detalles internos de una clase y exponer solo la interfaz publica
 
